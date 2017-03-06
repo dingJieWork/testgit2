@@ -47,9 +47,23 @@
 		width: 16rem;
 		height: 14.2rem;
 	}
+	.phone_loge{
+		widows: 100%;
+		height: 4.5rem;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-moz-justify-content: center;
+		-ms-justify-content: center;
+		-o-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
+	}
 	#download_button{
 		width: 100%;
-		margin-top: 4.5rem;
+		/*margin-top: 4.5rem;*/
 		display: -webkit-flex;
 		display: flex;
 		-webkit-box-pack: center;
@@ -73,9 +87,58 @@
 <body>
 	<div id="download">
 		<div id="download_loge"><img src="gb@2x.png" alt=""></div>
-		<div id="download_button"><a class="download_button">下载安装</a></div>
+		<div class="phone_loge"><img src="" alt=""></div>
+		<div id="download_button"><a class="download_button" href="#">下载安装</a></div>
 	</div>
 </body>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
+	// if (Zepto.device.android) {
+ //        $("body").addClass('android');
+ //    }else if (Zepto.device.ios) {
+ //        $("body").addClass('ios');
+ //        if(Zepto.device.iphone) {
+ //            $("body").addClass('iphone');
+ //        }
+ //        if(Zepto.device.ipad) {
+ //            $("body").addClass('ipad');
+ //        }
+ //    }
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  //判断iPhone|iPad|iPod|iOS
+	    //alert(navigator.userAgent);  
+	    // window.location.href ="iPhone.html";
+	    $("body").removeClass("android");
+	    $("body").addClass("ios");
+	    console.log("ios+++++++++++++++++++++++++");
+
+	} else if (/(Android)/i.test(navigator.userAgent)) {   //判断Android
+		$("body").removeClass("iOS");
+		$("body").addClass("android");
+	    //alert(navigator.userAgent); 
+	    //window.location.href ="Android.html";
+	    console.log("android+++++++++++++++++++++++++");
+	} else {  //pc
+	    // window.location.href ="pc.html";
+	    console.log("windows+++++++++++++++++++++++++");
+	};
+	// function downloadFile(url) {   
+ //        try{ 
+ //            var elemIF = document.createElement("iframe");   
+ //            elemIF.src = url;   
+ //            elemIF.style.display = "none";   
+ //            document.body.appendChild(elemIF);   
+ //        }catch(e){ 
+ 
+ //        } 
+ //    }
+    $("body").on("click",".download_button",function(){
+    	console.log("点击事件");
+    	if ($("body").hasClass("ios")) {
+    		window.location.href = 'itms-services:///?action=download-manifest&url=https://raw.githubusercontent.com/dingJieWork/testgit2/master/jzkj.plist';
+    		alert("进来了");
+    	}else if($("body").hasClass("android")){
+    		$(".download_button").href ="";
+    	}
+    })
 </script>
 </html>
