@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://120.234.56.66:8100/WorkerPortal.ipa</string>
+					<string>https://raw.githubusercontent.com/dingJieWork/testgit2/master/123.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
