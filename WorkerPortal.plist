@@ -18,22 +18,6 @@
                         <key>url</key>
                         <string>http://120.234.56.66:8100/WorkerPortal.ipa</string>
                     </dict>
-                    <dict>
-                        <key>kind</key>
-                        <string>display-image</string>
-                        <key>needs-shine</key>
-                        <true/>
-                        <key>url</key>
-                        <string>http://120.234.56.66:8100/gb@2x.png</string>
-                    </dict>
-                    <dict>
-                        <key>kind</key>
-                        <string>full-size-image</string>
-                        <key>needs-shine</key>
-                        <true/>
-                        <key>url</key>
-                        <string>http://120.234.56.66:8100/gb@2x.png</string>
-                    </dict>
                 </array>
                 <key>metadata</key>
                 <dict>
