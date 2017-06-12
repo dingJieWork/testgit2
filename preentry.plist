@@ -21,13 +21,13 @@
                 <key>metadata</key>
                 <dict>
                     <key>bundle-identifier</key>
-                    <string>com.kingdom.workerportal</string>
+                    <string>com.kingdom.preEntry</string>
                     <key>bundle-version</key>
                     <string>1.0.0</string>
                     <key>kind</key>
                     <string>software</string>
                     <key>title</key>
-                    <string>员工门户</string>
+                    <string>预处理</string>
                 </dict>
             </dict>
         </array>
